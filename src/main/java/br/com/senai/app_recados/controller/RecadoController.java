@@ -38,6 +38,11 @@ public class RecadoController {
         Recado recadoInserido = recadoService.insertNew(recado);
         return ResponseEntity.ok().body(recadoInserido);
     }
+    @PostMapping
+    public ResponseEntity<List<Recado>> insertList(@RequestBody List<Recado> recados){
+        List<Recado> recadosInseridos = recadoService.insertList(recados);
+        return ResponseEntity.ok().body(recadosInseridos);
+    }
     @PutMapping("/{id}")
     public ResponseEntity<Recado> update(@PathVariable Long id, @RequestBody Recado recado){
         Recado recadoAlterado = recadoService.update(id, recado);

@@ -29,6 +29,10 @@ public class RecadoService {
         recado.setLido(false);
         return recadoRepository.save(recado);
     }
+    // Insert List
+    public List<Recado> insertList(List<Recado> recados){
+        return recadoRepository.saveAll(recados);
+    }
 
     // Update Recado
     public Recado update(Long id, Recado recadoAlterado){
