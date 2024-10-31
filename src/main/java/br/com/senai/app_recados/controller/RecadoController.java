@@ -38,7 +38,7 @@ public class RecadoController {
         Recado recadoInserido = recadoService.insertNew(recado);
         return ResponseEntity.ok().body(recadoInserido);
     }
-    @PostMapping
+    @PostMapping("/lista")
     public ResponseEntity<List<Recado>> insertList(@RequestBody List<Recado> recados){
         List<Recado> recadosInseridos = recadoService.insertList(recados);
         return ResponseEntity.ok().body(recadosInseridos);

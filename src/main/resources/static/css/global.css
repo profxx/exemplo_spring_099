@@ -1,0 +1,13 @@
+.tables{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.opcoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btn-sm{
+    font-size: 8px;
+}
